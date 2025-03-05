@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Перенаправлення...</title>
+    <script>
+        setTimeout(function() {
+            var a = document.createElement("a");
+            a.href = "https://yourwebsite.com"; // ЗАМІНІТЬ НА СВІЙ САЙТ
+            a.target = "_blank";
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }, 1500);
+    </script>
+</head>
+<body>
+    <h3>Зачекайте, відкриваємо сайт...</h3>
+</body>
+</html>
