@@ -3,16 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Перехід на сайт</title>
+    <title>Відкрити у Safari</title>
 </head>
 <body>
-    <h3>Натисніть кнопку, щоб продовжити:</h3>
-    <button onclick="openSite()">Перейти</button>
+    <h3>Натисніть кнопку, щоб відкрити сайт у Safari:</h3>
+    <button onclick="openInSafari()">Перейти</button>
 
     <script>
-        function openSite() {
-            var websiteUrl = "https://safeyourlove.com/?utm_source=tiktok";
-            window.open(websiteUrl, "_blank");
+        function openInSafari() {
+            if (navigator.share) {
+                navigator.share({
+                    title: "Перейти на сайт",
+                    text: "Натисніть, щоб відкрити сайт у Safari/Chrome",
+                    url: "https://safeyourlove.com/?utm_source=tiktok&utm_medium=obio"
+                });
+            } else {
+                alert("Ваш браузер не підтримує поділитися через Safari.");
+            }
         }
     </script>
 </body>
