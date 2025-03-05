@@ -3,19 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Перенаправлення...</title>
-    <script>
-        setTimeout(function() {
-            var a = document.createElement("a");
-            a.href = "https://safeyourlove.com/?utm_source=tiktok"; // ЗАМІНІТЬ НА СВІЙ САЙТ
-            a.target = "_blank";
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-        }, 1500);
-    </script>
+    <title>Перехід на сайт</title>
 </head>
 <body>
-    <h3>Зачекайте, відкриваємо сайт...</h3>
+    <h3>Натисніть кнопку, щоб продовжити:</h3>
+    <button onclick="openSite()">Перейти</button>
+
+    <script>
+        function openSite() {
+            var websiteUrl = "https://yourwebsite.com";
+            window.open(websiteUrl, "_blank");
+        }
+    </script>
 </body>
 </html>
